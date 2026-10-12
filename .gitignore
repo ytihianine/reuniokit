@@ -325,6 +325,7 @@ dist
 
 # Additional ignores
 complexipy_*.txt
+secret.yaml
 
 # Re-include the Next.js source library. The Python `lib/` rule above is
 # unanchored and would otherwise exclude this source directory from version
