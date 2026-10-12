@@ -1,15 +1,16 @@
 # Build Stage
-FROM node:21-alpine3.18 AS BUILD_IMAGE
+FROM node:26-alpine3.23 AS BUILD_IMAGE
 WORKDIR /app
+ARG NPM_PROXY_URL=""
 COPY package*.json ./
-RUN npm config set proxy http://172.16.0.53:3128
+RUN if [ -n "$NPM_PROXY_URL" ]; then npm config set proxy "$NPM_PROXY_URL"; fi
 RUN npm i
 COPY . .
 RUN npm run build
 
 
 # Production Stage
-FROM node:21-alpine3.18 AS PRODUCTION_STAGE
+FROM node:26-alpine3.2 AS PRODUCTION_STAGE
 WORKDIR /app
 COPY --from=BUILD_IMAGE /app/package*.json ./
 COPY --from=BUILD_IMAGE /app/.next ./.next
