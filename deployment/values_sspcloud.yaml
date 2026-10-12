@@ -22,9 +22,12 @@ objets:
     pod:
       name: reuniokit-frontend
       image:
-        repository: registry.gitlab.com/ytihianine/reuniokit/ui
+        repository: ghcr.io/ytihianine/reuniokit/reuniokit
         tag: latest
         imagePullPolicy: Always
+      envFrom:
+        - secretRef:
+            name: reuniokit-secret
       port: 5050
       securityContext: {}
     service:
@@ -43,21 +46,22 @@ ingress:
   hosts:
     - host: reuniokit.lab.sspcloud.fr
       paths:
-        - path: /api(/|$)(.*)
-          pathType: ImplementationSpecific
-          backend:
-            service:
-            # name fait référence au nom du service définit dans le name du metadata de service-x.yaml / doit être identique au nom défini pour le service
-              name: reuniokit-svc-api
-              port:
-                number: 7070
         - path: /app(/|$)(.*)
           pathType: ImplementationSpecific
           backend:
-           service:
+            service:
               name: reuniokit-svc-frontend
               port:
                 number: 7050
+      #   - path: /api(/|$)(.*)
+      #     pathType: ImplementationSpecific
+      #     backend:
+      #       service:
+      #       # name fait référence au nom du service définit dans le name du metadata de service-x.yaml / doit être identique au nom défini pour le service
+      #         name: reuniokit-svc-api
+      #         port:
+      #           number: 7070
+
 
 resources:
   limits:

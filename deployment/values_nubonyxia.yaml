@@ -26,6 +26,9 @@ objets:
       image:
         repository: harbor.lab.incubateur.finances.rie.gouv.fr/sg-dsci/reuniokitfrontend
         tag: "e62dcffe"
+      envFrom:
+        - secretRef:
+            name: reuniokit-secret
       port: 5050
       securityContext: {}
     service:
