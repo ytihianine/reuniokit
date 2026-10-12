@@ -3,15 +3,10 @@ import type {
   AstuceAnimationSolutionGristRecord,
 } from "@/src/types/grist/astuce-grist";
 import type { AstuceAnimation } from "@/src/types/models/astuce";
-import { cacheLife, cacheTag } from "next/cache";
 import "server-only";
 import { gristClient } from "./grist-client";
 
 export async function getAstuces(): Promise<AstuceAnimation[]> {
-  "use cache";
-  cacheLife("days");
-  cacheTag("astuces");
-
   const [irritants, solutions] = await Promise.all([
     gristClient.getRecords<AstuceAnimationIrritantGristRecord>(
       "Astuce_animation_irritant",

@@ -78,7 +78,6 @@ export class GristClient {
 
     const response = await fetch(url, {
       method: "GET",
-      cache: "no-store",
       headers: {
         Accept: "application/json",
         Authorization: `Bearer ${this.getApiKey()}`,
@@ -141,7 +140,6 @@ export class GristClient {
 
     const response = await fetch(url, {
       method: "GET",
-      cache: "no-store",
       headers: {
         Authorization: `Bearer ${this.getApiKey()}`,
       },

@@ -8,7 +8,6 @@ import type {
   FicheMethodeWithDeroule,
   FicheMethodeWithObjectifContenu,
 } from "@/src/types/models/bibliotheque";
-import { cacheLife, cacheTag } from "next/cache";
 import "server-only";
 import { gristClient } from "./grist-client";
 
@@ -53,10 +52,6 @@ function mapFicheMethodeDerouleItem({
 export async function getFichesMethodeForBibliotheque(): Promise<
   FicheMethodeWithObjectifContenu[]
 > {
-  "use cache";
-  cacheLife("days");
-  cacheTag("fiche-methode");
-
   const [ficheRecords, derouleRecords] = await Promise.all([
     gristClient.getRecords<FicheMethodeGristRecord>("Fiche_methode"),
     gristClient.getRecords<FicheMethodeDerouleGristRecord>(
@@ -79,10 +74,6 @@ export async function getFichesMethodeForBibliotheque(): Promise<
 }
 
 export async function getFichesMethode(): Promise<FicheMethode[]> {
-  "use cache";
-  cacheLife("days");
-  cacheTag("fiche-methode");
-
   const records =
     await gristClient.getRecords<FicheMethodeGristRecord>("Fiche_methode");
   return records.map(mapFicheMethode);
@@ -91,10 +82,6 @@ export async function getFichesMethode(): Promise<FicheMethode[]> {
 export async function getFicheMethode(
   id: number,
 ): Promise<FicheMethodeWithDeroule> {
-  "use cache";
-  cacheLife("days");
-  cacheTag("fiche-methode");
-
   const [ficheRecord, derouleRecords] = await Promise.all([
     gristClient.getRecord<FicheMethodeGristRecord>("Fiche_methode", id),
     // Intitule est la clé étrangère vers Fiche_methode dans Fiche_methode_deroule

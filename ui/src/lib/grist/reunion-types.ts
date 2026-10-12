@@ -9,7 +9,6 @@ import type {
   ReunionType,
   ReunionTypeDeroule,
 } from "@/src/types/models/reunion-type";
-import { cacheLife, cacheTag } from "next/cache";
 import "server-only";
 import { gristClient } from "./grist-client";
 import { mapGristRecordToReunionType } from "./mappers";
@@ -58,20 +57,12 @@ function groupAndSortDeroules(
 }
 
 export async function getReunionTypes(): Promise<ReunionType[]> {
-  "use cache";
-  cacheLife("days");
-  cacheTag("reunion-types");
-
   const records =
     await gristClient.getRecords<ReunionTypeGristRecord>("Reunion_type");
   return records.map(mapGristRecordToReunionType);
 }
 
 export async function getReunionType(id: number): Promise<ReunionType> {
-  "use cache";
-  cacheLife("days");
-  cacheTag("reunion-types");
-
   const record = await gristClient.getRecord<ReunionTypeGristRecord>(
     "Reunion_type",
     id,
@@ -82,10 +73,6 @@ export async function getReunionType(id: number): Promise<ReunionType> {
 export async function getReunionTypeDeroule(
   id: number,
 ): Promise<ReunionTypeDeroule> {
-  "use cache";
-  cacheLife("days");
-  cacheTag("reunion-types");
-
   const records = await gristClient.getRecords<ReunionTypeDerouleGristRecord>(
     "Reunion_type_deroule",
     { id_reunion_type: [id] },
