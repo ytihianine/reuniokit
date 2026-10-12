@@ -325,3 +325,9 @@ dist
 
 # Additional ignores
 complexipy_*.txt
+
+# Re-include the Next.js source library. The Python `lib/` rule above is
+# unanchored and would otherwise exclude this source directory from version
+# control, causing CI builds to fail with "Module not found".
+!ui/src/lib/
+!ui/src/lib/**
