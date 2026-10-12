@@ -58,13 +58,13 @@ const CustomHeader = () => {
             ? wordingHeaders["astuces d'animation"].sm
             : wordingHeaders["astuces d'animation"].xl,
         },
-        {
-          iconId: "fr-icon-drag-move-2-line",
-          linkProps: { href: hrefDerouleFormulaire },
-          text: smallerThanXl
-            ? wordingHeaders["générateur atelier"].sm
-            : wordingHeaders["générateur atelier"].xl,
-        },
+        // {
+        //   iconId: "fr-icon-drag-move-2-line",
+        //   linkProps: { href: hrefDerouleFormulaire },
+        //   text: smallerThanXl
+        //     ? wordingHeaders["générateur atelier"].sm
+        //     : wordingHeaders["générateur atelier"].xl,
+        // },
         {
           iconId: "fr-icon-booklet-line",
           linkProps: { href: hrefBibliotheque },
