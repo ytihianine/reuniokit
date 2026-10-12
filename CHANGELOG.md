@@ -4,6 +4,28 @@
 
 * update env url ([23ae56a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/23ae56afd101236ffb4698535bf62ef801fd47dc))
 
+## [3.0.3](https://github.com/ytihianine/reuniokit/compare/v3.0.2...v3.0.3) (2026-10-12)
+
+
+### Bug Fixes
+
+* **api:** add cache no-store to fix runtime api call issues ([66b6e92](https://github.com/ytihianine/reuniokit/commit/66b6e923729cbfd102e6a8c3925d58bb9c5e9380))
+* **ui:** add force-dynamic to fiche methode ([3101424](https://github.com/ytihianine/reuniokit/commit/3101424984215f047b40556794176b3c5605effa))
+* **ui:** comment cacheComponents ([125b63d](https://github.com/ytihianine/reuniokit/commit/125b63d9c8d2f9f55d99b2f39708d5cdf5ed729c))
+* **ui:** hide Atelier sur mesure in header ([e200f63](https://github.com/ytihianine/reuniokit/commit/e200f63506d5c4789d80dc1743c15e1257f1d485))
+* **ui:** remove caching mechanism ([833257c](https://github.com/ytihianine/reuniokit/commit/833257c694ce27c813a1d78e85fad6f99ea84e00))
+* **ui:** resolve incompatibility between cache and build ([1d15958](https://github.com/ytihianine/reuniokit/commit/1d159589fe00995f3380018e7c528996e5dc8e9b))
+
+
+### Autres
+
+* **ci:** remove caching ([4abb052](https://github.com/ytihianine/reuniokit/commit/4abb052934c75a8f44868aae567bc1af8b78d58f))
+* **deps:** update docker/build-push-action action to v7 ([#9](https://github.com/ytihianine/reuniokit/issues/9)) ([305128e](https://github.com/ytihianine/reuniokit/commit/305128e0090d72d81c2189d5d5863cb4712d0e1b))
+* **deps:** update docker/login-action action to v4 ([#12](https://github.com/ytihianine/reuniokit/issues/12)) ([eaa7ab7](https://github.com/ytihianine/reuniokit/commit/eaa7ab75fe729c9d14128d494ab7334213ce122a))
+* **deps:** update docker/setup-buildx-action action to v4 ([#13](https://github.com/ytihianine/reuniokit/issues/13)) ([3afd00a](https://github.com/ytihianine/reuniokit/commit/3afd00aabe324ca52e63ac19b3d04557220ea7f6))
+* **lint:** exclude helm chart ([9529676](https://github.com/ytihianine/reuniokit/commit/95296765fb5deaa355e54495acb908514960d9b7))
+* **ui:** remove documentation ([3304bbe](https://github.com/ytihianine/reuniokit/commit/3304bbe6284c6d2a276d0286c82bf80b19c11225))
+
 ## [3.0.2](https://github.com/ytihianine/reuniokit/compare/v3.0.1...v3.0.2) (2026-10-12)
 
 
