@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.objectif {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.objectifTitle {
+  display: flex;
+  flex-direction: row;
+}
+
+.number {
+  padding: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 30px;
+  background: #4d1c6b;
+  color: white;
+  margin-right: 2em;
+}
+
+.texte {
+  color: #4d1c6b;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #4d1c6b;
+  width: 100%;
+}
+
+.badge {
+  color: #ab214e;
+  background: #fde3ec;
+  width: 100%;
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 10em;
+  border: 1px solid black;
+  border-radius: 20px;
+  border-color: #979797;
+  cursor: pointer;
+}
+
+.cardHeader {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1.5em;
+
+  p {
+    height: 60%;
+    color: #ab214e;
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.cardHeaderBarre {
+  height: 30px;
+  width: 30px;
+}
+
+.cardContent {
+  padding: 0 1.5em;
+  text-align: justify;
+}
+
+.otherFiche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+
+  p {
+    color: #4d1c6b;
+  }
+}
+
+.otherFicheButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 9.527px 28.581px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11.909px;
+    background: var(--Brand-color, #4d1c6b);
+    margin: 0 0.25em;
+  }
+}

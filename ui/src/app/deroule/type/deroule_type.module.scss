@@ -1,0 +1,106 @@
+@use "@/src/styles/variables.scss" as *;
+
+.container {
+  font-family: marianne !important;
+  margin: 0.5em 0;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: var(--text-action-high-blue-france);
+  font-size: $font-size-title;
+  font-weight: $font-weight-bold;
+}
+
+.hr {
+  margin-block: 24px;
+  border: 1px solid #0974f6;
+}
+
+.filterBar {
+  margin-bottom: 30px;
+}
+
+.filterTitle {
+  color: var(--light-text-mention-grey, #666);
+  font-family: Marianne;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.09px;
+  margin-bottom: 10px;
+}
+
+.searchContainer {
+  margin-bottom: 20px;
+}
+
+.filterControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.filterLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.filterRight {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid #000091;
+  border-left: 0px;
+  background: #f5f5fe;
+  color: #000091;
+  min-width: 250px;
+  font-size: 14px;
+
+  &::placeholder {
+    color: #666;
+  }
+
+  &:focus {
+    outline: none;
+    background: #ececfe;
+  }
+}
+
+.filterTags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  :global(.fr-tag) {
+    background-color: #f5f5fe;
+    color: #000091;
+    border: 1px solid #000091;
+
+    &:hover {
+      background-color: #ececfe;
+    }
+  }
+}
+
+.cardGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+
+  // Mobile: 1 colonne
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

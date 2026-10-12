@@ -1,0 +1,12 @@
+@use "@/src/styles/variables.scss" as *;
+@use "@/src/styles/mixins.scss" as *;
+
+.pageTitle {
+  @include page-title($color-primary);
+}
+
+.section {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}

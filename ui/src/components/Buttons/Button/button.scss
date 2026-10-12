@@ -1,0 +1,40 @@
+.buttonPrimary button,
+.buttonSecondary button,
+.buttonTertiary button {
+  min-width: 90%;
+  text-align: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  color: #fff;
+  font-family: Marianne;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(
+    --button-bg-color,
+    #4d1c6b
+  ); // Couleur par défaut avec possibilité de personnalisation
+
+  &:hover {
+    background-color: var(
+      --button-hover-bg-color,
+      #6a2d8a
+    ); // Couleur de survol par défaut avec possibilité de personnalisation
+  }
+
+  img {
+    margin-right: 8px; // Espace entre l'icône et le texte
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+  }
+}

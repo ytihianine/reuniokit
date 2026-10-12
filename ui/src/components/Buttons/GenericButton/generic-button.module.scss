@@ -1,0 +1,20 @@
+.button {
+  --border-default-grey: white;
+  color: white;
+  // border-color: red !important; // le DSFR utilise un box shadow et pas un border
+  border-radius: 10px;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.light {
+  --border-default-grey: white;
+  color: white !important;
+}
+
+.dark {
+  --border-default-grey: black;
+  color: black !important;
+}

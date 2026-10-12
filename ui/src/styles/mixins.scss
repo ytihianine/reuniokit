@@ -1,0 +1,37 @@
+@use "@/src/styles/variables.scss" as *;
+
+@mixin font-style($size, $weight, $color) {
+  font-family: $font-family-primary;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin section-spacing($margin) {
+  margin: $margin 0;
+}
+
+@mixin button-style($bg-color, $text-color) {
+  display: flex;
+  padding: $padding-small $padding-medium;
+  align-items: center;
+  gap: $padding-small;
+  border-radius: $border-radius-small;
+  background: $bg-color;
+  color: $text-color;
+  box-shadow: $box-shadow-default;
+}
+
+@mixin page-title($title-color) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    color: $title-color;
+  }
+}

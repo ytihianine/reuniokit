@@ -1,0 +1,21 @@
+@use "@/src/styles/variables.scss" as *;
+@use "@/src/styles/mixins.scss" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height: 20em;
+  margin-right: 1em;
+  border-radius: 8px;
+  padding: 5px 25px;
+}
+
+.title {
+  @include font-style($font-size-medium, $font-weight-bold, $color-primary);
+}
+
+.contenu {
+  @include font-style(10, $font-weight-regular, $color-black);
+}

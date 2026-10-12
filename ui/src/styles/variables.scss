@@ -1,0 +1,53 @@
+// Couleurs
+$color-primary: #4d1c6b;
+$color-secondary: #000091;
+$color-black: #000;
+$color-background-alt: #eeeaf0;
+$color-background-highlight: #f5f5fe;
+
+$font-family-primary: "Marianne", sans-serif;
+
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+/*
+La taille des fonts des différents éléments présents sur le site
+*/
+// Générales
+$font-size-large: 32px;
+$font-size-medium: 24px;
+$font-size-small: 1.1em;
+$font-size-title: 1.75em;
+$font-size-subtitle: 1.5em;
+$font-size-text: 1em;
+$font-size-subtext: 0.75em;
+
+// HomeCard
+$font-size-homecard-title: 2em;
+$font-size-homecard-text: 1em;
+
+// LibrairyCard
+$font-size-libcard-title: 2em;
+$font-size-libcard-text: 1em;
+
+/*
+    Fin font-size
+*/
+
+// img
+$img-margin-right: 0.25em;
+
+// Breakpoints DSFR (en em, cf. @codegouvfr/react-dsfr/fr/generatedFromCss/breakpoints)
+$breakpoint-sm: 36em;
+$breakpoint-md: 48em;
+$breakpoint-lg: 62em;
+$breakpoint-xl: 78em;
+
+// Spacing
+$margin-large: 48px;
+$margin-medium: 24px;
+$padding-small: 8px;
+$padding-medium: 16px;
+
+$box-shadow-default: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+$border-radius-small: 8px;

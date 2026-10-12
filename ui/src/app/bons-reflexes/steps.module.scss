@@ -1,0 +1,29 @@
+.cardsContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+// NB: tweak en doublant la classe pour être plus spécifique que les styles du DSFR (ici, sur une page sombre, on veut que le texte des cards soit noir et pas blanc)
+.cardsContainer.cardsContainer p,
+.cardsContainer.cardsContainer h3 {
+  color: black !important;
+  text-align: left;
+}
+
+.cardsContainer.cardsContainer .fr-card__desc {
+  color: red !important;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 900 / 350;
+}
+
+.containerAdvice {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}

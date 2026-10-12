@@ -1,0 +1,193 @@
+@use "@/src/styles/variables.scss" as *;
+
+.container {
+  width: 100%;
+
+  h4 {
+    color: $color-secondary;
+    margin-right: 0.5em;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: 64px;
+  padding-bottom: 48px;
+  margin-left: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+  background-color: var(--background-alt-blue-france);
+}
+
+.headerPageTitle {
+  color: var(--text-label-blue-france);
+}
+
+.headerDescription {
+  margin: 0 0 1.25em;
+}
+
+.headerTags {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  background-color: var(--background-default-grey);
+  color: var(--text-label-blue-france);
+  margin-right: 1em;
+}
+
+.deroule {
+  margin-top: 95px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.derouleSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.derouleSectionTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.derouleSectionBarre {
+  padding-bottom: 1em;
+}
+
+.derouleSectionTime {
+  color: #000091;
+  margin-left: 0.5em;
+}
+
+.pause {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 10px;
+  background: #000091;
+  margin-bottom: 24px;
+
+  p:first-of-type {
+    display: flex;
+    justify-content: center;
+    color: var(--White, #fff);
+    font-family: Chewy;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+
+  p:last-of-type {
+    display: flex;
+    justify-content: center;
+    color: var(--White, #fff);
+    font-family: Marianne;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.746px;
+    margin: 0;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.autresRessources {
+  margin-top: 114px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+
+  > * {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.bibliothequeCard {
+  display: flex;
+  padding: 24px 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0;
+  border-radius: 10px;
+  border: 1px solid #de7899;
+  background: var(--White, #fff);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+  p {
+    color: #ab214e;
+    text-align: center;
+    font-family: Marianne;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  button {
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #ab214e;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #fff;
+    font-family: Marianne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+  }
+}
+
+.callout {
+  margin-top: 64px;
+}
+
+.etapesContainer {
+  column-count: 2;
+  column-gap: 32px;
+  column-rule: 1px solid #bfccfb;
+}
+
+.etape {
+  background-color: #f5f5fe;
+  padding: 24px 48px;
+  margin-bottom: 24px;
+  break-inside: avoid;
+}
+
+.etapeContent {
+  margin-left: 8px;
+}
+
+.sousEtape {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footerCard {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}

@@ -1,0 +1,378 @@
+@use "@/src/styles/variables.scss" as *;
+
+$color-dark-purple: #2d0a42;
+$color-pink-title: #ce70cc;
+$color-dsfr-blue: #000091;
+$color-progression-highlight: #993857;
+
+// ---- Full-width wrapper (breaks out of fr-container) ----
+
+.fullWidthWrapper {
+  --bons-reflexes-bg-step: #2d0a42;
+  --bons-reflexes-bg-form: #f6f6ff;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -40px;
+  background-color: var(--bons-reflexes-bg-step);
+}
+
+// ---- Phase intro: fond violet, texte blanc ----
+
+.phaseIntro {
+  color: white;
+
+  .stepCount {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .stepTitle {
+    color: white;
+  }
+
+  .progressSegment {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .nextStepHint {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .mainTitle {
+    color: $color-pink-title;
+  }
+
+  .subtitle {
+    color: white;
+  }
+
+  .textContent,
+  .textContent p {
+    color: white !important;
+  }
+
+  .ctaButton {
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+}
+
+// ---- Phase form: fond clair, couleurs DSFR ----
+
+.phaseForm {
+  color: #161616;
+
+  .stepCount {
+    color: #3a3a3a;
+  }
+
+  .stepTitle {
+    color: #161616;
+  }
+
+  .progressSegment {
+    background-color: #eee;
+  }
+
+  .nextStepHint {
+    color: #666;
+  }
+
+  .mainTitle {
+    color: $color-primary;
+  }
+
+  .subtitle {
+    color: #161616;
+  }
+
+  .textContent p {
+    color: #161616;
+  }
+
+  .ctaButton {
+    color: white;
+    background-color: $color-dsfr-blue;
+
+    &:hover {
+      background-color: #1212ff;
+    }
+  }
+
+  .navButtonPrevious {
+    color: #280e37;
+  }
+
+  .navButtonNext {
+    color: #280e37;
+  }
+}
+
+// ---- Layout ----
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 48px 75px;
+  display: flex;
+  flex-direction: column;
+  min-height: 680px;
+}
+
+.motionViewport {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.motionPage {
+  width: 100%;
+}
+
+// ---- Progress bar ----
+
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.progressBar {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.progressSegment {
+  flex: 1;
+  height: 8px;
+  background-color: #d0bcdb !important;
+}
+
+.progressSegmentActive {
+  background-color: $color-progression-highlight !important;
+}
+
+.progressSegmentActiveQuestion {
+  background-color: #4d1c6b !important;
+}
+
+.stepInfo {
+  display: flex;
+  gap: 4px;
+  justify-content: end;
+}
+
+.stepCount {
+  font-family: $font-family-primary;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.stepTitle {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: 20px;
+  line-height: 28px;
+}
+.nextStepHint {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-family: $font-family-primary;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.nextStepLabel {
+  font-weight: $font-weight-bold;
+}
+
+// ---- Main content (intro) ----
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  flex: 1;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+// ---- Step info aligné à droite (questions) ----
+
+.stepInfoRight {
+  display: flex;
+  gap: 0;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+// ---- Question content ----
+
+.questionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  flex: 1;
+  justify-content: center;
+  padding: 40px 0;
+  max-width: 824px;
+  margin: 0 auto;
+}
+
+.questionTitle {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+  color: #161616;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+// ---- Mise en exergue (highlight) ----
+
+.highlight {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 792px;
+  padding-left: 32px;
+}
+
+.highlightBorder {
+  width: 4px;
+  min-width: 4px;
+  background-color: #6a6af4;
+  border-radius: 2px;
+}
+
+.highlightText {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  font-size: 18px;
+  line-height: 28px;
+  color: #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    margin: 0 0 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ---- Boutons de choix ----
+
+.choiceButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.choiceButton {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  font-size: 20px;
+  line-height: 24px;
+  color: #270e37;
+  background: none;
+  border: 1px solid #270e37;
+  border-radius: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  justify-content: center;
+
+  width: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.mainTitle {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: 72px;
+  line-height: 80px;
+  text-align: center;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+.subtitle {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textContent {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  max-width: 700px;
+
+  p {
+    margin: 0 0 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ---- Navigation ----
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}

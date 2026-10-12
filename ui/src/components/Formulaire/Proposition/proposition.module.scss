@@ -1,0 +1,453 @@
+.globalContainer {
+  .derouleTop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+  }
+
+  .resultat {
+    display: flex;
+    align-items: center;
+    color: var(--Brand-color, #4d1c6b);
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  .derouleTop h1 {
+    color: var(--Black, #000);
+    font-family: Arial;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .criteres {
+    color: #4d1c6b;
+    font-family: Marianne;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21.746px;
+  }
+
+  .derouleTopFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .derouleTopFilterSujet,
+  .derouleTopFilterModalite,
+  .derouleTopFilterNombre,
+  .derouleTopFilterDuree {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+  }
+
+  .derouleTopFilterTitle {
+    display: flex;
+    color: #4d1c6b;
+    font-family: Marianne;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.813px;
+    text-transform: uppercase;
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  .derouleTop hr {
+    all: unset;
+    display: block;
+    background: #af5ce2;
+    height: 1px;
+    margin-bottom: 24px;
+  }
+
+  .derouleTopInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    p {
+      color: #4d1c6b;
+      font-family: Marianne;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  .sectionTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+
+    h4 {
+      margin-right: 1em;
+      color: #4d1c6b;
+    }
+
+    img {
+      height: 2em;
+      margin-bottom: 1em;
+    }
+
+    p {
+      color: #4d1c6b;
+    }
+  }
+
+  .etape {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .derouleBottom {
+    display: flex;
+  }
+
+  .derouleBottomLeft {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .derouleBottomLeftInformation {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+    }
+  }
+
+  .number {
+    display: flex;
+    padding: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12.999px;
+    border-radius: 31.197px;
+    background: var(--Brand-color, #4d1c6b);
+    color: white;
+    margin-right: 20px;
+  }
+
+  .objectif {
+    color: var(--Brand-color, #4d1c6b);
+    font-family: Marianne;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid #4d1c6b;
+  }
+
+  .derouleBottomLeftInformationBadge {
+    display: flex;
+    padding: 11px 18px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    background: #fde3ec;
+  }
+
+  .badgeTxt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ab214e;
+    font-family: Marianne;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24.568px;
+    margin: 0;
+  }
+
+  .derouleInclusion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .derouleInclusionTitle {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  .derouleInclusionTitleTxt {
+    display: flex;
+    align-items: center;
+    color: #000091;
+    font-family: Marianne;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21.746px;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .derouleInclusionTitleTime {
+    color: #000091;
+    font-family: Marianne;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.746px;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .derouleInclusionDescription {
+    color: var(--Black, #000);
+    font-family: Marianne;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .derouleInclusionCard {
+    width: 70%;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #979797;
+    background: var(--White, #fff);
+    margin-bottom: 24px;
+
+    p {
+      color: var(--Black, #000);
+      font-family: Marianne;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+
+  .derouleInclusionCardInformation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .derouleInclusionCardInformationLeft {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    color: #ab214e;
+    font-family: Chewy;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .minute {
+    display: flex;
+    align-items: center;
+    color: #ab214e;
+    font-family: Marianne;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.746px;
+  }
+
+  .difficulte {
+    display: flex;
+    align-items: center;
+    color: #ab214e;
+    font-family: Marianne;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.746px;
+  }
+
+  .derouleInclusionCardInformationBadge {
+    display: flex;
+    padding: 11px 18px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    background: #fde3ec;
+  }
+
+  .pause {
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #000091;
+    margin-bottom: 24px;
+
+    p:first-of-type {
+      display: flex;
+      justify-content: center;
+      color: var(--White, #fff);
+      font-family: Chewy;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+    }
+
+    p:last-of-type {
+      display: flex;
+      justify-content: center;
+      color: var(--White, #fff);
+      font-family: Marianne;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21.746px;
+      margin: 0;
+
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .derouleBottomRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p:first-of-type {
+      color: #4d1c6b;
+      font-family: Marianne;
+      font-size: 21.751px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 38.064px;
+      text-transform: uppercase;
+    }
+
+    p:last-of-type {
+      color: var(--Brand-color, #4d1c6b);
+      text-align: center;
+      font-family: Marianne;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .derouleBottomRightButton {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+      display: flex;
+      width: 64px;
+      height: 64px;
+      padding: 9.527px 28.581px;
+      justify-content: center;
+      align-items: center;
+      gap: 9.527px;
+      border-radius: 11.909px;
+      background: var(--Brand-color, #4d1c6b);
+      box-shadow: 0px 1.191px 2.382px 0px rgba(16, 24, 40, 0.05);
+    }
+  }
+
+  .derouleTelechargement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .derouleTelechargementLeft {
+    display: flex;
+    flex-direction: column;
+
+    button:first-of-type {
+      color: #4d1c6b;
+      text-align: center;
+      font-family: Marianne;
+      font-size: 18.265px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 27.397px;
+
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    button:last-of-type {
+      color: #4d1c6b;
+      text-align: center;
+      font-family: Marianne;
+      font-size: 18.265px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 27.397px;
+      border-bottom: 1px solid #4d1c6b;
+    }
+  }
+
+  .derouleTelechargementRight {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      display: flex;
+      padding: 9.132px 27.397px;
+      justify-content: center;
+      align-items: center;
+      gap: 22.831px;
+      border-radius: 11.416px;
+      background: #4d1c6b;
+      color: white;
+      box-shadow: 0px 1.142px 2.283px 0px rgba(16, 24, 40, 0.05);
+    }
+  }
+}

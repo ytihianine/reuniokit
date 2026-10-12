@@ -1,0 +1,341 @@
+$section-padding: 2.5em 15%;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: tomato;
+  gap: 20px;
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+
+    &-left {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+
+      .middle_container__img {
+        width: auto;
+        max-width: 100%;
+      }
+    }
+
+    &__group {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .button-pink {
+      background-color: #ac224f !important;
+
+      &:hover {
+        background-color: #8a1c40 !important;
+      }
+    }
+
+    .middle_container_button_charged:hover {
+      background: #311144;
+    }
+  }
+
+  .middle_container__group {
+    padding: 5% 15% 0 15%;
+
+    p {
+      text-align: center;
+    }
+
+    .middle_container__group_text {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+
+      div {
+        flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  .middle__img__title {
+    width: auto;
+    max-width: 15%;
+  }
+
+  // Section Styling
+  @mixin section-style($bg-color) {
+    height: 100%;
+    width: 100%;
+    padding: $section-padding;
+    background: $bg-color;
+  }
+
+  .section-1 {
+    @include section-style(#f6f6f6);
+
+    a {
+      color: var(--Black, #000);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .section-2 {
+    @include section-style(#ffff);
+
+    h2 {
+      color: #4d1c6b;
+    }
+
+    p:nth-child(3) {
+      color: var(--Brand-color, #4d1c6b);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    a {
+      color: var(--Black, #000);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .button-container {
+      width: 20%;
+    }
+  }
+
+  .section-3 {
+    @include section-style(#f6f6f6);
+
+    h2 {
+      color: #000091;
+    }
+
+    p:nth-child(3) {
+      color: var(--Brand-color, #000091);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    a {
+      color: var(--Black, #000);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .button-container {
+      width: 20%;
+    }
+
+    .card-container-deroule {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        min-width: 30%;
+        max-width: 30%;
+      }
+    }
+
+    .card-container-text {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        text-align: center;
+        min-width: 30%;
+        max-width: 30%;
+        color: #000091;
+        text-align: center;
+        font-family: Marianne;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+
+  .section-4 {
+    @include section-style(#ffff);
+
+    h2 {
+      color: #ab214e;
+    }
+
+    p:nth-child(3) {
+      color: var(--Brand-color, #ab214e);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    a {
+      color: var(--Black, #000);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .button-container {
+      width: 20%;
+    }
+  }
+
+  .section-5 {
+    @include section-style(#f6f6f6);
+
+    p:nth-child(3) {
+      color: var(--Brand-color, #ab214e);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    a {
+      color: var(--Black, #000);
+      font-family: Marianne;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .button-container {
+      width: 20%;
+    }
+
+    .card-container-partner {
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        min-width: 30%;
+        max-width: 30%;
+      }
+    }
+  }
+
+  .section-6 {
+    @include section-style(#fff);
+
+    .main_link {
+      color: var(--light-text-action-high-blue-france, #000091);
+      font-family: Marianne;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    h2 {
+      color: #000;
+    }
+
+    .card-container-mi {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        min-width: 30%;
+        max-width: 30%;
+      }
+    }
+
+    .card-container-text {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        min-width: 30%;
+        max-width: 30%;
+        color: var(--Black, #000);
+        font-family: Marianne;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .card-container-title {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        min-width: 30%;
+        max-width: 30%;
+        color: #4d1c6b;
+        font-family: Marianne;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+
+    .card-container-link {
+      display: flex;
+      justify-content: space-between;
+
+      .link-container {
+        min-width: 30%;
+        max-width: 30%;
+
+        a {
+          color: var(--light-text-action-high-blue-france, #000091);
+          font-family: Marianne;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.middle_container__group_card {
+  display: flex;
+  justify-content: space-around;
+}

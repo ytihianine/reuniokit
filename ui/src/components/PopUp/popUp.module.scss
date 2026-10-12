@@ -1,0 +1,112 @@
+.popUpContainer {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  display: flex;
+  width: 488px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  border: 1px solid #d0d0dd;
+  background: #fff;
+  box-shadow:
+    0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  z-index: 1;
+}
+
+.popUpTop {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  p:first-child {
+    color: #101028;
+    font-family: Marianne;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  p:nth-child(2) {
+    color: #474767;
+    font-family: Marianne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+
+.popUpMiddle {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  p {
+    color: #474767;
+    font-family: Marianne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+  }
+
+  textarea {
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #d0d0dd;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+}
+
+.popUpBottom {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonCancel {
+  width: 45%;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid #d0d0dd;
+  background: #f5f5fe;
+  color: #ac224f;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  cursor: pointer;
+}
+
+.buttonValidate {
+  width: 45%;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: #fcc0b0;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #ac224f;
+  cursor: pointer;
+}

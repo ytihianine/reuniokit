@@ -1,0 +1,49 @@
+imagePullSecrets:
+  - name: registries
+
+objets:
+  - name: frontend
+    enabled: true
+    pod:
+      name: reuniokitfrontend-frontend
+      image:
+        repository: harbor.lab.incubateur.finances.rie.gouv.fr/sg-dsci/reuniokitfrontend
+      port: 5050
+      securityContext: {}
+    service:
+      name: reuniokitdev-svc-frontend
+      type: ClusterIP
+      port: 7070
+      targetPort: http
+
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: #{}
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  hosts:
+    - host: reuniokitfrontend.lab.incubateur.finances.rie.gouv.fr
+      paths:
+        - path: /app(/|$)(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: reuniokitdev-svc-frontend
+              port:
+                number: 7070
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+serviceAccount:
+  create: false
+
+nodeSelector:
+  nubonyxia.users: "true"

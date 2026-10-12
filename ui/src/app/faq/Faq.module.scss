@@ -1,0 +1,32 @@
+@use "@/src/styles/variables.scss" as *;
+@use "@/src/styles/mixins.scss" as *;
+
+.faq {
+  margin: $margin-medium 0;
+
+  h2 {
+    color: $color-primary;
+  }
+
+  h4 {
+    color: $color-secondary;
+    margin-top: 1em;
+  }
+}
+
+.faqSection {
+  @include section-spacing($margin-large);
+  padding: 5% 10%;
+}
+
+.faqSectionAlt {
+  background: $color-background-alt;
+}
+
+.faqSectionHighlight {
+  background: $color-background-highlight;
+}
+
+.faqButton {
+  @include button-style($color-secondary, white);
+}

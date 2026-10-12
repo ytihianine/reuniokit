@@ -1,0 +1,50 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(
+    100vh - 430px
+  ); // Ajustez en fonction de la hauteur de votre header et footer
+  padding-block: calc(16px * 5);
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  // margin-top: 80px;
+
+  // si la largeur est inférieure à 768px (mobile), alors on passe en une seule colonne
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    // margin-top: 80px;
+    gap: 80px;
+  }
+}
+
+.wordingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 32px;
+
+  // Réinitialiser toutes les marges des éléments enfants
+  > * {
+    margin: 0;
+  }
+
+  .highlight {
+    color: #ce70cc;
+  }
+
+  // // Alternative plus spécifique si nécessaire
+  // > h1, > h2, > h3, > h4, > h5, > h6, > p {
+  //   margin: 0;
+  // }
+}

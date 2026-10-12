@@ -1,0 +1,100 @@
+include:
+  - project: "bercyhub/nubonyxia/nubonyxia-templates"
+    file: "/gitlab/python_app.gitlab-ci.yml"
+    ref: v1.1
+
+##====================================================================
+## Il est possible de
+## surcharger les valeurs par défaut des variables d'environnements
+## de la CI/CD
+##--------------------------------------------------------------------
+## /!\ Ne pas définir dans ce fichier des variables portant des
+##     données sensibles telles que des mots de passe, ...
+##  => pour cela, ajouter ces variables dans les Paramètres CI/CD de
+##     de votre projet GitLab
+##--------------------------------------------------------------------
+
+Config:pip:
+  rules:
+    - when: never
+
+Build:app:
+  rules:
+    - when: never
+
+Build:image:
+  script: |
+    # Building image
+    /kaniko/executor ${KANIKO_OPTIONS} ${KANIKO_BUILD_ARGS} --context=${CONTEXT}/ui --dockerfile=${CONTEXT}/${DOCKER_FILE} --destination "${DESTINATION}" --tar-path ${ARTIFACTS_PATH}/${IMAGE_ARCHIVE} --no-push
+  needs: null
+  rules: null
+
+Push:chart:
+  script: |
+    # Check if chart folder exists
+    if [ -d "ui/chart" ]; then
+      # Pushing chart to Helm repository
+      cd ui/chart
+      helm repo update
+      helm cm-push . ${HELM_REPOSITORY}
+    else
+      echo "Error: il ne semble pas y avoir de répertoire 'chart' présent dans le projet"
+      exit 1
+    fi
+  rules:
+    - if: $USE_HELM == "true"
+      when: always
+
+Push:image:
+  rules:
+    - when: always
+
+Deploy:chart:
+  script: |
+    # Deploying application
+    helm repo update
+    helm upgrade --install --kube-token $(cat /var/run/secrets/kubernetes.io/serviceaccount/token) \
+      ${APPLICATION_NAME} ${HELM_REPOSITORY}/${CHART_NAME} -n $(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace) \
+      --set image.repository=${IMAGE_REPOSITORY} --set objets[0].pod.image.tag=${APPLICATION_VERSION} -f ui/values.yaml
+  rules:
+    - if: $USE_HELM == "true"
+
+Clean:artefacts:
+  rules: null
+
+variables:
+  # Permet de changer le nom du fichier Dockerfile par défaut
+  DOCKER_FILE: "ui/Dockerfile"
+  # ---------------
+  # Nom du projet Harbor dans lequel sera poussée l'image de container
+  REGISTRY_PROJECT: "sg-dsci"
+  # ---------------
+  # Proxy HTTPS à utiliser dans les différents jobs et/ou la construction
+  # d'images de containers
+  HTTPS_PROXY: "172.16.0.53:3128"
+  #
+  # ---------------
+  # Eléments de configuration Onyxia
+  # NUBONYXIA_ID: Identifiant du compte utilisateur sur la plateforme NubOnyxia
+  # NUBONYXIA_REGISTRY_SECRET:
+  #         Nom du secret du compte correspondant à NUBONYXIA_ID devant contenir
+  #         les clés USERNAME et PASSWORD d'accès à Harbor
+  NUBONYXIA_ID: ytihianine
+  NUBONYXIA_REGISTRY_SECRET: registries
+  # ---------------
+  #
+  # Utilisation de Helm pour le push de chart et le déploiement de l'application
+  USE_HELM: "true" # par défaut
+  #
+  # S'il existe un répertoire 'chart' dans le projet, devrait correspondre au
+  # nom du chart présent dans le fichier 'chart.Chart.yaml'
+  CHART_NAME: reuniokitfrontend
+  # ---------------
+  #
+  # Utilisation de kubectl pour le déploiement de l'application
+  USE_KUBECTL: "false" # par défaut
+  # ---------------
+  #
+  # Permet de définir le nom de l'application qui, par défaut, correspond au
+  # nom du projet
+  APPLICATION_NAME: "reuniokitfrontend"

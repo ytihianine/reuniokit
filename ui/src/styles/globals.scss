@@ -1,0 +1,47 @@
+@use "@/src/styles/variables.scss" as *;
+
+html {
+  // Force scrollbar to always be visible to prevent layout shift
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  font-weight: normal;
+  font-style: normal;
+  color: $color-black;
+}
+
+img {
+  margin-right: $img-margin-right;
+}
+
+h2 {
+  color: $color-black;
+  font-family: $font-family-primary;
+  font-size: $font-size-title;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+}
+
+p {
+  color: $color-black;
+  font-size: $font-size-text;
+  font-style: normal;
+  line-height: normal;
+}
+
+// On désactive le comportement des buttons HTML mis en place par la feuille de style CSS du DSFR
+// a[href]:hover,
+// button:not(:disabled):hover:not([class^="Mui"]),
+// input[type="button"]:not(:disabled):hover,
+// input[type="image"]:not(:disabled):hover,
+// input[type="reset"]:not(:disabled):hover,
+// input[type="submit"]:not(:disabled):hover {
+//   // background-color: transparent !important;
+//   text-decoration: none;
+// }
