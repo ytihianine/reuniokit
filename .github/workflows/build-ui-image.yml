@@ -73,7 +73,7 @@ jobs:
           context: ui
           file: ui/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.image.outputs.tags }}
+          tags: ${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.tag }}
           build-args: |
             NPM_PROXY_URL=${{ inputs.npm_proxy_url }}
           cache-from: type=gha,scope=ui
