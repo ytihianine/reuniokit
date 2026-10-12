@@ -2,23 +2,23 @@ imagePullSecrets:
   - name: registries
 
 objets:
-  - name: api
-    enabled: true
-    pod:
-      name: reuniokit-api
-      image:
-        repository: harbor.lab.incubateur.finances.rie.gouv.fr/sg-dsci/reuniokitapi
-        tag: "e765bdcf"
-      envFrom:
-        - secretRef:
-            name: reuniokit
-      port: 5050
-      securityContext: {}
-    service:
-      name: reuniokit-svc-api
-      type: ClusterIP
-      port: 7070
-      targetPort: http
+  # - name: api
+  #   enabled: true
+  #   pod:
+  #     name: reuniokit-api
+  #     image:
+  #       repository: harbor.lab.incubateur.finances.rie.gouv.fr/sg-dsci/reuniokitapi
+  #       tag: "e765bdcf"
+  #     envFrom:
+  #       - secretRef:
+  #           name: reuniokit
+  #     port: 5050
+  #     securityContext: {}
+  #   service:
+  #     name: reuniokit-svc-api
+  #     type: ClusterIP
+  #     port: 7070
+  #     targetPort: http
   - name: frontend
     enabled: true
     pod:

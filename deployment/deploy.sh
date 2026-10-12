@@ -1,11 +1,15 @@
 #!/bin/bash
 
 APP_NAME="reuniokit"
+values_sspcloud="./values_sspcloud.yaml"
+values_nubonyxia="./values_nubonyxia.yaml"
 
-helm ls --all --short | grep "^$APP_NAME" | xargs -L1 helm delete
+# sspcloud or nubonyxia
+deploy_to="sspcloud"
 
-kubectl get all -o name | grep -i $APP_NAME | xargs kubectl delete
-
-
-# Déployer l'application - le nom "chartyt" peut être changé. Il faut changer les "grep" pour correspondre au nouveau nom.
-helm install $APP_NAME -f ./values.yaml ./chart
+# Déployer l'application
+if ["$deploy_to" == "sspcloud"];
+    helm install $APP_NAME -f $values_sspcloud ./chart
+else if
+    helm install $APP_NAME -f $values_nubonyxia ./chart
+fi;

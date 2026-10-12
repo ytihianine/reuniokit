@@ -1,22 +1,22 @@
 objets:
-  - name: api
-    enabled: true
-    pod:
-      name: reuniokit-api
-      image:
-        repository: registry.gitlab.com/ytihianine/reuniokit/api
-        tag: latest
-        imagePullPolicy: Always
-      envFrom:
-        - secretRef:
-            name: reuniokit
-      port: 5050
-      securityContext: {}
-    service:
-      name: reuniokit-svc-api
-      type: ClusterIP
-      port: 7070
-      targetPort: http
+  # - name: api
+  #   enabled: true
+  #   pod:
+  #     name: reuniokit-api
+  #     image:
+  #       repository: registry.gitlab.com/ytihianine/reuniokit/api
+  #       tag: latest
+  #       imagePullPolicy: Always
+  #     envFrom:
+  #       - secretRef:
+  #           name: reuniokit
+  #     port: 5050
+  #     securityContext: {}
+  #   service:
+  #     name: reuniokit-svc-api
+  #     type: ClusterIP
+  #     port: 7070
+  #     targetPort: http
   - name: frontend
     enabled: true
     pod:
@@ -69,4 +69,3 @@ resources:
 
 serviceAccount:
   create: false
-
