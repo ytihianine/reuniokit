@@ -1,65 +1,105 @@
-# Changelog
-
-## [0.3.0](https://github.com/ytihianine/template-projet/compare/v0.2.0...v0.3.0) (2026-08-16)
-
-
-### Features
-
-* **make:** add complexipy command ([0d56d3e](https://github.com/ytihianine/template-projet/commit/0d56d3e462eedfff353b10fb216db176bf1cf903))
-
-
-### Autres
-
-* **ci:** remove node packages ([b7a6b5c](https://github.com/ytihianine/template-projet/commit/b7a6b5c359cf802961cb051c84c5c5313d2a4a24))
-* **deps:** add complexipy ([6fdd268](https://github.com/ytihianine/template-projet/commit/6fdd268b6b2f54a48b92239afa76067aa8a04582))
-* **deps:** update dependency pre-commit to v4.6.1 ([#19](https://github.com/ytihianine/template-projet/issues/19)) ([73f4eaf](https://github.com/ytihianine/template-projet/commit/73f4eaffc1c54ed620aa7b6246c0bde9bf53bf9b))
-* **deps:** update dependency pre-commit to v4.6.2 ([#23](https://github.com/ytihianine/template-projet/issues/23)) ([07d3073](https://github.com/ytihianine/template-projet/commit/07d3073882a5a17d23232e3fa9d1fe55eb6ab433))
-* **deps:** update dependency pydantic-settings to v2.15.0 ([#22](https://github.com/ytihianine/template-projet/issues/22)) ([5dbe4b5](https://github.com/ytihianine/template-projet/commit/5dbe4b5434c4e3cfd2474d01164a8ce6169ef59b))
-
-## [0.2.0](https://github.com/ytihianine/template-projet/compare/v0.1.0...v0.2.0) (2026-07-22)
-
-
-### Features
-
-* **ci:** update release please config ([279f716](https://github.com/ytihianine/template-projet/commit/279f716acb48467bf09c7efb8509b185bb59aa7e))
-
-
-### Documentation
-
-* **changelog:** remove old changelog parts ([3086c3a](https://github.com/ytihianine/template-projet/commit/3086c3ac1f0883530095bb8538684bf33a9caad4))
-
-
-### Autres
-
-* **deps:** update googleapis/release-please-action action to v5 ([#18](https://github.com/ytihianine/template-projet/issues/18)) ([cf9ffbe](https://github.com/ytihianine/template-projet/commit/cf9ffbeb1efd72257062e3af6964991f88d5bfc6))
-
-## 0.1.0 (2026-07-22)
-
-
-### Features
-
-* add a function to load config ([1ecce61](https://github.com/ytihianine/template-projet/commit/1ecce6133bfd2e47f58a0ad1357d88f84fe498a6))
-* add agent pour écrire du code ([4dbfbb8](https://github.com/ytihianine/template-projet/commit/4dbfbb8be28c74848abf7184b5f4cd85d160a4e5))
-* add code example ([52906d4](https://github.com/ytihianine/template-projet/commit/52906d41dc3ee00820ca5980755ffb5eb0ec59a6))
-* add code example using agent skill ([95706cc](https://github.com/ytihianine/template-projet/commit/95706cc66b4263c1d80bd7a273fed8f6107a8b7b))
-* add mypy au precommit ([c3f56fb](https://github.com/ytihianine/template-projet/commit/c3f56fb3bdf5104bbcb38a4e0785be7f08461e9a))
-* add pre-commit ([665957d](https://github.com/ytihianine/template-projet/commit/665957da590c5956df793d8f2590b9def0251446))
-* add python anti-pattern skill ([4e11f34](https://github.com/ytihianine/template-projet/commit/4e11f342791ac5d65c9178deebe5e5b9d550fa47))
-* add setup env ([7082dc7](https://github.com/ytihianine/template-projet/commit/7082dc77cd8f288534fda20684df7e0d56e2fd05))
-* add setup-dev-env make command ([0938498](https://github.com/ytihianine/template-projet/commit/0938498c7d950afe2e585120db68b71c5fb05509))
-* **ci:** switch semantic release to release please ([f97991b](https://github.com/ytihianine/template-projet/commit/f97991b7f63bfc07e71b655d79a8e1cb31c4c67f))
-* **make:** add clean command ([811ab8b](https://github.com/ytihianine/template-projet/commit/811ab8bfee617a2ecee6c1207956520057f73f84))
-* **skills:** add skill pour rédiger la documentation ([2852889](https://github.com/ytihianine/template-projet/commit/2852889d293abc165b61b599857cd7986e6b9a98))
-* update skill to write code ([55a84e4](https://github.com/ytihianine/template-projet/commit/55a84e415178054dd55b4e8b08f6e0052845815b))
-
+## [3.0.1](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/compare/v3.0.0...v3.0.1) (2025-06-05)
 
 ### Bug Fixes
 
-* **ci:** add releaseRules to commit-analyzer config ([4bf00de](https://github.com/ytihianine/template-projet/commit/4bf00de8d962137722531b1ed3211831ea97ef3a))
-* **ci:** simplify it by using default python release type ([a257377](https://github.com/ytihianine/template-projet/commit/a257377934d5778bb1216458af8ec6ef4875d573))
+* update env url ([23ae56a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/23ae56afd101236ffb4698535bf62ef801fd47dc))
 
+## [3.0.0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/compare/v2.0.0...v3.0.0) (2025-06-04)
+
+## [2.0.0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/compare/v1.0.0...v2.0.0) (2025-06-04)
+
+## 1.0.0 (2025-06-04)
+
+### Features
+
+* add badge & alerts pour la page en construction ([47ddbad](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/47ddbad4caac37e269ec18e968eeccd986bff680))
+* add fil d'ariane au générateur ([157b161](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/157b161ebf73ecfb20bbb43b26b7e0f7687f9083))
+* add fil mariane sur la page qu'est-ce que c'est ([b6961e8](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/b6961e854d70fd17558fd4e738da913ff0301710))
+* add import functions ([a7c57bc](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/a7c57bce819bc8fe779620d6298f3232e20b18f8))
+* add page mentions légales ([7a0d81f](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/7a0d81f3cf99464c5c7b0a7c32764919a4e21aa1))
+* add values check before going to next step in generateur ([16671e0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/16671e06b9adce43695f14fd7ea56ba0c508fb67))
+* add visuel pour la section autres ressources home page ([39a5fa9](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/39a5fa924e766e7f44fa64bad6d52ccd21901bc1))
+* add votre avis compte ([8dba864](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/8dba864d002f724cbb3794ce3ee4b115053edf5d))
+* **api:** add property to /fiche/synthese endpoint ([0a4007e](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/0a4007e076885c513e4791921376c66ae0a98e72))
+* **api:** removing page_size limit ([9e88fc4](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/9e88fc4d474c2e68678549b9b863285eddbb1c3f))
+* **bibliotheque:** changed function names and params names ([4aac00c](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/4aac00c1d967b922bfcb3d8e16ff043dd53106a8))
+* **bibliotheque:** displayed fiches by categories ([4cbb8ab](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/4cbb8ab615aa08b3a09ebf7905ad8b36ae1d2324))
+* few updates ([2dcd950](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/2dcd9504649f2993904048edbfe4338e63937a7e))
+* **filters:** display filters only if set ([de5127b](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/de5127bfc299d9318cd22dc0b7f3630c8388c82a))
+* **filters:** dynamic tags ([8692d79](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/8692d795c4952a3bd157cf7a087588722e7dd571))
+* **filtres:** delete tag on click ([3375b06](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/3375b06c3318b7996cd431178d659aab63dda156))
+* **filtres:** filter by difficulte ([8f4f4d3](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/8f4f4d3262b4474518bb6d41534fdb2ca022a89e))
+* **filtres:** filter by modalite ([bfbfe03](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/bfbfe0396bfeafb6be24d789a40e95f42012e7fc))
+* **filtres:** filter by search term ([536c778](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/536c778e0f92b93d87a067624e44031ef01c147e))
+* **filtres:** filter categories to display ([9d097b2](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/9d097b26f954128841cfcf3611362055957499ea))
+* **filtres:** fix filter data ([0298f01](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/0298f01f48d9510c41dc73a9b7e8203e58054a24))
+* **filtres:** fix JSX keys ([2871b71](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/2871b71da5e4c0b76cb8b5355a3ea8f0f0fb461a))
+* **filtres:** fix reset objectifs filter ([d7a2d57](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d7a2d5771671a7b1387d1202ca31b63a080a87d4))
+* **filtres:** move functions out of render function ([90d7e22](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/90d7e2243fc3f9ff594839c25b1586b6a272f498))
+* **filtres:** refactor (single filter function) ([8c87dc2](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/8c87dc2938c6eb437f596647c2f82d6410f90174))
+* **filtres:** refactor filtering ([ab0c1cd](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/ab0c1cd5f91b01845588c2212a7c94d94f32b8ef))
+* **filtres:** select value matches active filter ([2ba64a5](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/2ba64a5556a49096611daa630093a1e5310191c7))
+* **filtres:** star emoji for difficulte ([f36d517](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/f36d517f2877aa02131b8e9fd0d5503bc07680fd))
+* **filtres:** tags layout ([fe001b7](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/fe001b7cbbfaea95d07c75fef9fc1a630e7ddfde))
+* **filtres:** uncomment filters data "difficultés" ([59dd983](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/59dd9832acccf84e477b0c6234a569d8c2148ed2))
+* refactor deroule sur mesure ([a26141d](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/a26141d754961a2dadd638d00f24ff856f1041b3))
+* refactor step two ([e66d560](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/e66d5600ee8a6a0c19c4e73c4f2946343129b4a9))
+* remove unused useState ([d3d2854](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d3d2854fbc26a7bbb4232278dc488374694b9dd1))
+* removing back button from step two ([4339e43](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/4339e436eca397f149483e707ab9bbf5d85e9edb))
+* removing unused stuff ([3287b86](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/3287b86ded6c34ee0457c25f9293e4a98f248694))
+* **ui:** update to match new API ([1154c87](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/1154c8712be1d1698ea08f4f741ca7a811048e42))
+* update bibliotheque to show only 6 first fiches ([f029508](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/f0295084d52da42f3aecdcc7fd88aa746c80716d))
+* update button text in header ([ee96592](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/ee965924af886a65d20f98e6d01583ff12e634e0))
+* update cardDerouleCustom ([b3dedd3](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/b3dedd3f146150e4842e567c7984d078854a8e32))
+* update css for step three ([b279aa8](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/b279aa8f381d3117ddfb71c26b420c342fae1eaa))
+* update home page ([dfeaf64](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/dfeaf64b2dd99153cb98031d78825c95baae2a2f))
+* update impactless things ([93258f9](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/93258f955ab410206744df973779dae83453904f))
+* update lien questionnaire galileo ([d4d233f](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d4d233f35a48351c7411d63080c74cffc62be34f))
+* update MEF name in header and footer ([530b0ab](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/530b0ab04fef5b8525f44bee9b930b62123851b3))
+* update mention-légales ([9523ac2](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/9523ac2485373d1f765bd428f54bc8d2b145c95c))
+* update mentions legales ([92ff52f](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/92ff52fb6bd30c1b90ebc4a736094da03abbfd8c))
+* update proposition json format ([e765bdc](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/e765bdcf12e4df3e4e4f20f14073b31fb386ea7c))
+* update proposition json format ([eaf6705](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/eaf6705b07cfc43a840ccc24c5523de3239c29f0))
+* update sous-titre 2ème section ([d224dd9](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d224dd9a946df5a769aa85dac18281fde2938a03))
+* update sous-titre 3ème section ([d1bff7f](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d1bff7f7709e40dcbc3fcfca84e46dc67317381f))
+* update sous-titre 3ème section ([3ad5fbe](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/3ad5fbe8f1bbddbb470ab05b2b5ba9aa3329f765))
+* update sous-titre des cases ([805cb6e](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/805cb6e07fc3a3c278950d09fcecf8366620764d))
+* update texte ([801dc5f](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/801dc5f73a8e1ca0e4fd3bff3c2ad34c81e2bbac))
+* update texte ([285589e](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/285589e8754129f78728e916cb2a5d0bf64645c2))
+* update texte ([cc4d621](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/cc4d6217b9b4506e4b092037ea53f8af0e31bc30))
+* update texte ([dd25d79](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/dd25d79aa5d9f478debba226536987725ed87bc0))
+* update texte ([bab1274](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/bab1274af91d1e843b68231a13d5271f096ec662))
+* update texte déroulé sur mesure ([d1b2dd3](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d1b2dd3066770c38e7bbe462cd524ccf7c950fc8))
+* update texte déroulé sur mesure ([57bb677](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/57bb677434bb759a144ac190a02909316885d0f9))
+* update texte home page ([bca1b29](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/bca1b29cfee46ec865bb7b3399bd1fdf9db3eb44))
+* update texte introductif ([4377372](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/4377372f937978ef4965d10414420fd0f7621475))
+* update texte, add badge and remove imgs ([b208ea4](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/b208ea4d6096c822d8347356489a9b264ee0fe19))
+* update titre ([e3ccc2c](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/e3ccc2c6222745a08c999f4d7c4f040808fe2a01))
+* update titre 2eme section ([e96a7d4](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/e96a7d4d518ef85c8b54852d87dd17e0c2703dfe))
+* update titre 4eme section ([51f159c](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/51f159c90c255a9e4ee6b574adedea4c75c7afae))
+* update titre dans les cas ([c674cae](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/c674cae32d24d47d1bf60cca120b40c9af372c9c))
+* update values ([70a1dd5](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/70a1dd5c64e29cf72752d45ffe3cf8d450855d27))
+* update values in deployment ([370aee6](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/370aee65061b7e93c611659cdd4be64e15f31634))
+
+### Bug Fixes
+
+* add files folder ([580ac0a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/580ac0a125ed473da0793e5fb152bd7908303ff2))
+* add réel lien pour retrouver une aide ([b42a4eb](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/b42a4ebaa93c7320e56fc0633c9b2fe4834152f8))
+* **api:** add missing route ([2136032](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/21360329d1b017d26ac421d9c0e1a1abf6a8789f))
+* duree total of each part of atelier ([a96057a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/a96057a1e3c52f945f58a91aa97b064d1f41c7c6))
+* proposition deroule en distanciel ([46d93e8](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/46d93e8aca38c4d99160ed8ec218197671dd18fd))
+* text encoding ([3e76f3e](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/3e76f3e5cb748cf4179efae8d8b7c75966380cfb))
+* update button pour reset le formulaire ([7a3b523](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/7a3b523fa970d37f6fc7839ad08d8faeb7138417))
+* update deroule type complement ([470c6f0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/470c6f075a94452ccb4be7277d63ec4f64c79f8d))
+* update deroule type detail to match API data structure ([d0b5e10](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/d0b5e10a235162c209cd42699e1ac40ee28f2b67))
+* update parameters due to previous commit ([6e3cc10](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/6e3cc10a824caccf381ea227c1c56af1b838157b))
+* update proposition based on modality ([72fd9a6](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/72fd9a6f69d31d4e91cfd8df35dd77858d433a46))
+* update proposition to match usual fiche format ([06c421f](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/06c421f305a282b6a9cedf32513e3cfd10400b37))
+* update style pour aligner les éléments ([5b41633](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/5b41633ca52a20ef00ae5866daa8263be9d5fcf9))
+* update the way to import data from file to db ([fc4f521](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/fc4f5217fa40080ea50acdc29b3b95090a266aac))
+* update to match API data structure ([8e55c9a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/8e55c9a309117b095d888c472b76e34e65550f72))
+* update types to match API data structure ([4161cb0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/4161cb0b7f35f64a7841a8c5b32d8b592fe416ed))
 
 ### Documentation
 
-* add release workflow description ([#4](https://github.com/ytihianine/template-projet/issues/4)) ([634ca1c](https://github.com/ytihianine/template-projet/commit/634ca1c36f50733b8c25daf2f2c9db21022f3999))
-* add root readme ([df7be83](https://github.com/ytihianine/template-projet/commit/df7be837bdde8b82671846a1a49fbde65a944f9b))
+* update readme ([06d5a6d](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/06d5a6ddd604d2abc6333fe360e7e610929ff386))
