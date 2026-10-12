@@ -1,12 +1,28 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./astuces.module.scss";
 
 import CardIrritant from "@/src/components/Cards/CardIrritant/CardIrritant";
 import { wordingHeaders } from "@/src/constants/wording";
-import { getAstuces } from "@/src/lib/grist/astuces";
+import { AstuceAnimation } from "@/src/types/models/astuce";
 import Breadcrumb from "@codegouvfr/react-dsfr/Breadcrumb";
 
-export default async function Astuces() {
-  const astuces = await getAstuces();
+export default function Astuces() {
+  const [astuces, setAstuces] = useState<AstuceAnimation[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/grist/astuce_animation")
+      .then((res) => res.json())
+      .then((data) => setAstuces(data.records))
+      .catch((err) => console.error("Failed to fetch astuces:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return <div>Chargement...</div>;
+  }
 
   return (
     <>
