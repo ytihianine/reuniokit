@@ -4,6 +4,45 @@
 
 * update env url ([23ae56a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/23ae56afd101236ffb4698535bf62ef801fd47dc))
 
+## [3.0.2](https://github.com/ytihianine/reuniokit/compare/v3.0.1...v3.0.2) (2026-10-12)
+
+
+### Bug Fixes
+
+* **ci:** typo in dockerfile image name ([5c4f68f](https://github.com/ytihianine/reuniokit/commit/5c4f68f62b06f9d1bef46657e3de03cd4b00affa))
+* **ci:** typo in tag step name ([cd3a7ac](https://github.com/ytihianine/reuniokit/commit/cd3a7ac3ef89e80715ac8991fb0ab9bdc7d29a8a))
+* **ui:** update page to make them less serverside to fix npm run build command ([24d80d2](https://github.com/ytihianine/reuniokit/commit/24d80d22ed4f48d35528c56b627508930402deb7))
+
+
+### Autres
+
+* add deployment folder ([2b9b356](https://github.com/ytihianine/reuniokit/commit/2b9b356e58d044e198b5827962fa85156f7ffed2))
+* add pyproject file ([9dd08ee](https://github.com/ytihianine/reuniokit/commit/9dd08ee913e274999c35cf925942bc7fe040a0cf))
+* add release files ([2275129](https://github.com/ytihianine/reuniokit/commit/227512943db9fd25f81c79e655a468e3331af526))
+* add ui folder ([1780965](https://github.com/ytihianine/reuniokit/commit/1780965e663f7fd0e4b485d7ed1118321d388846))
+* **build:** add assets.d.ts file due to package version ([60473cd](https://github.com/ytihianine/reuniokit/commit/60473cd0a81cc53d1d315b31fcdae5c3445c4df1))
+* **build:** update configs to match new package versions ([a45edc1](https://github.com/ytihianine/reuniokit/commit/a45edc197b56972ae205e35c5b006197c1e15fa9))
+* **build:** update minor versions of packages ([0d00bd2](https://github.com/ytihianine/reuniokit/commit/0d00bd23cf9a04dc64f7ee3f7260134f19a64f0e))
+* **build:** update more packages ([aba47f6](https://github.com/ytihianine/reuniokit/commit/aba47f66572f6514901b7a48d25b55fe32c6bbb4))
+* **cd:** add basePath in config ([f323552](https://github.com/ytihianine/reuniokit/commit/f3235525bd2e532df376e9fafa267733c223a5c0))
+* **cd:** add secret template ([4a9b0a7](https://github.com/ytihianine/reuniokit/commit/4a9b0a72acca50c4103a3c36fe59f17290d71212))
+* **cd:** simplify deployment files ([06b93a7](https://github.com/ytihianine/reuniokit/commit/06b93a7bf9a2c3059c993eb98d68558561489251))
+* **cd:** simplify deployment folder ([cb45862](https://github.com/ytihianine/reuniokit/commit/cb45862db0f4f9bfb506866d0aa55dae30fcd292))
+* **cd:** update env ([53c9db1](https://github.com/ytihianine/reuniokit/commit/53c9db1729ce677f4a2ebaa073b8e1ff64df7a9b))
+* **ci:** add docker ignore file ([0d12a84](https://github.com/ytihianine/reuniokit/commit/0d12a841bacd0043d752cf464cc11adfc1ada33e))
+* **ci:** add github image build ([5bbe9e9](https://github.com/ytihianine/reuniokit/commit/5bbe9e9e02ae304668a6e50aad35cf6555ff288a))
+* **config:** remove basePath and assetPrefix ([8bc874b](https://github.com/ytihianine/reuniokit/commit/8bc874bde67dd02f0db553857201667c0d284143))
+* delete project template doc ([b5783b9](https://github.com/ytihianine/reuniokit/commit/b5783b9bc85af0d872a6c424c867dd441cf50020))
+* delete template files ([d413724](https://github.com/ytihianine/reuniokit/commit/d413724c37ff71d8e80fa18b4ddb66ecbabe5f4d))
+* delete template files ([37b1c81](https://github.com/ytihianine/reuniokit/commit/37b1c81fe71eae2f1ba3d977136da4e060cdabc3))
+* **deps:** update dependency python to 3.15 ([#1](https://github.com/ytihianine/reuniokit/issues/1)) ([a6ae7db](https://github.com/ytihianine/reuniokit/commit/a6ae7db40d9259808c51091ad5259d8071babaf4))
+* remove gitlab files ([1cf1594](https://github.com/ytihianine/reuniokit/commit/1cf159492677fd6d5e592b624bcc9b73d72bb04b))
+* remove old gitlab files ([08b298f](https://github.com/ytihianine/reuniokit/commit/08b298fc11961f7d7ebbf9fb28d07839c1d0e1e2))
+* remove old k8s chart ([2935ba2](https://github.com/ytihianine/reuniokit/commit/2935ba21fc4ad6f7b4462ad3afa8e13b30d07abf))
+* remove old pages ([5564e47](https://github.com/ytihianine/reuniokit/commit/5564e47bbc12223e02404cb607cad11d0180ba7b))
+* update gitignore ([af86fde](https://github.com/ytihianine/reuniokit/commit/af86fde9a8287242988dcb20454611b631348337))
+* update gitignore ([9f482e7](https://github.com/ytihianine/reuniokit/commit/9f482e7b167b58f7bdf1e568355d4f76c131368c))
+
 ## [3.0.0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/compare/v2.0.0...v3.0.0) (2025-06-04)
 
 ## [2.0.0](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/compare/v1.0.0...v2.0.0) (2025-06-04)
