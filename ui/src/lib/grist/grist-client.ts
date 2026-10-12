@@ -2,6 +2,7 @@
  * Grist API Client
  * Client pour interagir avec l'API Grist
  */
+import "server-only";
 
 // Types pour les réponses Grist
 export interface GristRecord<T = Record<string, any>> {
@@ -13,14 +14,32 @@ export interface GristRecordsResponse<T = Record<string, any>> {
   records: GristRecord<T>[];
 }
 
-// Configuration Grist
+// Configuration Grist (non sensible uniquement)
+// La clé API n'est jamais lue à l'évaluation du module ni à la
+// construction du client : elle est récupérée dans l'environnement
+// d'exécution (conteneur) à la première requête.
 const GRIST_CONFIG = {
   baseUrl:
     process.env.NEXT_PUBLIC_GRIST_BASE_URL ||
     "https://grist.numerique.gouv.fr/api",
   docId: process.env.NEXT_PUBLIC_GRIST_DOC_ID || "abrukV9rnpstUXcusj2JPa",
-  apiKey: process.env.GRIST_API_KEY || "",
+  apiKey: "",
 };
+
+/**
+ * Récupère la clé API Grist depuis l'environnement d'exécution.
+ * Appelée uniquement au moment d'une requête Grist réelle, jamais
+ * pendant le build. Ne log jamais la clé ni aucune partie de celle-ci.
+ */
+function getGristApiKey(): string {
+  const apiKey = process.env.GRIST_API_KEY;
+  if (!apiKey) {
+    throw new Error(
+      "GRIST_API_KEY is missing. Provide it in the runtime environment of the Next.js server (e.g. container environment).",
+    );
+  }
+  return apiKey;
+}
 
 /**
  * Client Grist pour récupérer les données
@@ -28,18 +47,16 @@ const GRIST_CONFIG = {
 export class GristClient {
   private baseUrl: string;
   private docId: string;
-  private apiKey: string;
+  private apiKeyOverride?: string;
 
   constructor(config?: Partial<typeof GRIST_CONFIG>) {
     this.baseUrl = config?.baseUrl || GRIST_CONFIG.baseUrl;
     this.docId = config?.docId || GRIST_CONFIG.docId;
-    this.apiKey = config?.apiKey || GRIST_CONFIG.apiKey;
+    this.apiKeyOverride = config?.apiKey || undefined;
+  }
 
-    console.log("GristClient initialized with:", {
-      baseUrl: this.baseUrl,
-      docId: this.docId,
-      apiKeySet: !!this.apiKey ? "renseigné" : "non renseigné",
-    });
+  private getApiKey(): string {
+    return this.apiKeyOverride || getGristApiKey();
   }
 
   /**
@@ -64,7 +81,7 @@ export class GristClient {
       cache: "no-store",
       headers: {
         Accept: "application/json",
-        Authorization: `Bearer ${this.apiKey}`,
+        Authorization: `Bearer ${this.getApiKey()}`,
       },
     });
 
@@ -126,7 +143,7 @@ export class GristClient {
       method: "GET",
       cache: "no-store",
       headers: {
-        Authorization: `Bearer ${this.apiKey}`,
+        Authorization: `Bearer ${this.getApiKey()}`,
       },
     });
 
