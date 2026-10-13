@@ -4,6 +4,19 @@
 
 * update env url ([23ae56a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/23ae56afd101236ffb4698535bf62ef801fd47dc))
 
+## [3.0.4](https://github.com/ytihianine/reuniokit/compare/v3.0.3...v3.0.4) (2026-10-13)
+
+
+### Documentation
+
+* update root readme ([bfa6f2a](https://github.com/ytihianine/reuniokit/commit/bfa6f2abab1b1d61156f992c15440582ccf47972))
+
+
+### Autres
+
+* **cd:** update sspcloud helm values ([4a07995](https://github.com/ytihianine/reuniokit/commit/4a07995494116447fdec61fe1ab24a48077d7aeb))
+* update dockerignore ([c0cc80a](https://github.com/ytihianine/reuniokit/commit/c0cc80a139000f294c26a0745f91f7d4701783bb))
+
 ## [3.0.3](https://github.com/ytihianine/reuniokit/compare/v3.0.2...v3.0.3) (2026-10-12)
 
 
