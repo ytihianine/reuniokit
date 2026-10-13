@@ -4,4 +4,6 @@ out
 coverage
 .git
 *.log
+.env
+.env.development
 .env*.local
