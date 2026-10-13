@@ -1,11 +1,9 @@
-# Template projet Python
+# Réuniokit
 
-Ce repository est un template de projet Python. Il sert de base pour démarrer un nouveau projet avec certains standards et des outils déjà configurés (Release Please).
-Il peut être adapté pour utiliser d'autres technologies (node, ...).
 
 ## Pré-requis
 
-- Python 3.12
+- Python
 - Node v24+
 - `make`
 
@@ -18,23 +16,39 @@ source env/bin/activate
 
 Cette commande crée l'environnement virtuel, installe les dépendances et configure pre-commit.
 
-## Variables d'environnement
+### UI — Variables Grist
 
-Copier `.env.example` en `.env` et adapter les valeurs.
-Si des variables d'environnement sont ajoutées, il faut modifier `src/utils/settings.py` pour qu'elles soient lues.
+L'interface frontend (Next.js) nécessite une clé API Grist pour récupérer les données côté serveur (fiches méthodes, astuces, réunions types).
 
-## Lancer le projet
+| Variable | Description |
+|----------|-------------|
+| `GRIST_API_KEY` | Clé d'authentification Bearer pour l'API Grist (server-side uniquement, **non exposée au client**) |
+| `NEXT_PUBLIC_GRIST_BASE_URL` | URL de base de l'API Grist (défaut : `https://grist.numerique.gouv.fr/api`) |
+| `NEXT_PUBLIC_GRIST_DOC_ID` | ID du document Grist (défaut : `abrukV9rnpstUXcusj2JPa`) |
+
+Créer un fichier `ui/.env.local` (non versionné) :
 
 ```bash
-python -m src.main
+# ui/.env.local
+GRIST_API_KEY="votre_cle_api_grist"
+NEXT_PUBLIC_GRIST_BASE_URL="https://grist.numerique.gouv.fr/api"
+NEXT_PUBLIC_GRIST_DOC_ID="abrukV9rnpstUXcusj2JPa"
 ```
 
-## Tests
+> **Note** : `GRIST_API_KEY` ne doit jamais commencer par le préfixe `NEXT_PUBLIC_` car elle ne doit pas être exposée côté client.
+> Les pages qui consomment des données Grist (`/bibliotheque`, `/astuces`, `/deroule/type`) appellent des API routes internes (`/api/grist/...`) qui utilisent la clé côté serveur.
 
-Pour lancer les tests
+### Lancer l'UI en local
+
 ```bash
-make test
+cd ui
+npm ci
+npm run dev
 ```
+
+L'application sera accessible sur http://localhost:5050.
+
+> **Prérequis** : la variable `GRIST_API_KEY` doit être définie dans `ui/.env.local` (voir section ci-dessus), sinon les pages données (bibliothèque, astuces, réunions types) renverront une erreur 401.
 
 ## Structure
 
@@ -43,8 +57,7 @@ make test
 ├── .github/
 │    ├── workflows: workflows github
 │    └── skills: skills copilot
-├── src/         # Code source
-├── tests/       # Tests unitaires (pytest)
+├── ui/          # Application Next.js (frontend)
 └── docs/        # Documentation complementaire
 ```
 
