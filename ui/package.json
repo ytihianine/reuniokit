@@ -22,7 +22,7 @@
     "@formkit/auto-animate": "^0.10.0",
     "@mui/material": "^9.5.0",
     "@mui/material-nextjs": "^9.5.0",
-    "framer-motion": "^14.1.0",
+    "motion": "^14.1.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",
     "next": "16.0.8",
