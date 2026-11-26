@@ -4,6 +4,39 @@
 
 * update env url ([23ae56a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/23ae56afd101236ffb4698535bf62ef801fd47dc))
 
+## [3.0.4](https://github.com/ytihianine/reuniokit/compare/v3.0.3...v3.0.4) (2026-11-26)
+
+
+### Bug Fixes
+
+* **deploy:** update nubonyxia values file ([a6ba012](https://github.com/ytihianine/reuniokit/commit/a6ba0129390efe252a087534dc875c23963c2668))
+* **deps:** update nextjs monorepo to v16.4.6 ([#11](https://github.com/ytihianine/reuniokit/issues/11)) ([53b67fb](https://github.com/ytihianine/reuniokit/commit/53b67fbf8b72d361088b1440de901a692e27f6b7))
+* **ui/cards:** replace div tag by span in sub p tag ([3804641](https://github.com/ytihianine/reuniokit/commit/3804641e09eb2cb92abe5b0bf4f4b4d6b0b1ac92))
+* **ui:** read proxy env vars in API calls ([fc3ca6d](https://github.com/ytihianine/reuniokit/commit/fc3ca6d532d5a24eb311ed16ac297df2e0ab8b2a))
+
+
+### Documentation
+
+* update root readme ([bfa6f2a](https://github.com/ytihianine/reuniokit/commit/bfa6f2abab1b1d61156f992c15440582ccf47972))
+
+
+### Autres
+
+* **cd:** update sspcloud helm values ([4a07995](https://github.com/ytihianine/reuniokit/commit/4a07995494116447fdec61fe1ab24a48077d7aeb))
+* **deploy:** add proxy vars placeholders in secret ([7edb66a](https://github.com/ytihianine/reuniokit/commit/7edb66a696d929c6497687e4e8b74f58ef4a0278))
+* **deploy:** delete secret before creating it ([7d9d77b](https://github.com/ytihianine/reuniokit/commit/7d9d77b468ce046fde688a0133ff62d45c756f8d))
+* **deps:** add minimum releaseage of 7 days ([e3b20eb](https://github.com/ytihianine/reuniokit/commit/e3b20eb1f2be4efd6194e474496e12cde85493f4))
+* **deps:** update dependency @codegouvfr/react-dsfr to v1.36.1 ([#19](https://github.com/ytihianine/reuniokit/issues/19)) ([d2c0822](https://github.com/ytihianine/reuniokit/commit/d2c0822c5a91b17fb07a263f46e0401a1ec4ef39))
+* **deps:** update dependency complexipy to v8.3.0 ([#22](https://github.com/ytihianine/reuniokit/issues/22)) ([0f168af](https://github.com/ytihianine/reuniokit/commit/0f168af654a884a1b9b40bee1354eb482f938c9a))
+* **deps:** update dependency eslint to v10.15.0 ([#23](https://github.com/ytihianine/reuniokit/issues/23)) ([62951cc](https://github.com/ytihianine/reuniokit/commit/62951cc2956dc564af3a2f4b56e7fc5846064981))
+* **deps:** update dependency eslint-plugin-prettier to v5.5.7 ([#7](https://github.com/ytihianine/reuniokit/issues/7)) ([dd02c88](https://github.com/ytihianine/reuniokit/commit/dd02c88497f3f35f23d0e1ebeabc4f1ea76ef578))
+* **deps:** update dependency framer-motion to v14.14.0 ([#16](https://github.com/ytihianine/reuniokit/issues/16)) ([a5d3af1](https://github.com/ytihianine/reuniokit/commit/a5d3af135e60963197a99c8dea3261691f6bf107))
+* **deps:** update dependency pre-commit to v4.7.0 ([#10](https://github.com/ytihianine/reuniokit/issues/10)) ([8b8e527](https://github.com/ytihianine/reuniokit/commit/8b8e52753809ce96ba6b6267495b94e43097ab78))
+* **deps:** update dependency prettier to v3.10.1 ([#24](https://github.com/ytihianine/reuniokit/issues/24)) ([bb02305](https://github.com/ytihianine/reuniokit/commit/bb02305f7ceb75633c196e594ca2c94e2bec2f90))
+* **deps:** update dependency sass to v1.108.2 ([#20](https://github.com/ytihianine/reuniokit/issues/20)) ([c8f8f1c](https://github.com/ytihianine/reuniokit/commit/c8f8f1ce7674ade289cbeb37dc9a8f81c5c0129f))
+* **deps:** update react monorepo to v19.3.3 ([#17](https://github.com/ytihianine/reuniokit/issues/17)) ([d945647](https://github.com/ytihianine/reuniokit/commit/d9456472b3f704b9211c9b70ea83dea801d0d9e5))
+* update dockerignore ([c0cc80a](https://github.com/ytihianine/reuniokit/commit/c0cc80a139000f294c26a0745f91f7d4701783bb))
+
 ## [3.0.3](https://github.com/ytihianine/reuniokit/compare/v3.0.2...v3.0.3) (2026-10-12)
 
 
