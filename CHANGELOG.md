@@ -4,6 +4,14 @@
 
 * update env url ([23ae56a](https://forge.dgfip.finances.rie.gouv.fr/sg/dsci/lt/dsci/reuniokit/commit/23ae56afd101236ffb4698535bf62ef801fd47dc))
 
+## [3.0.5](https://github.com/ytihianine/reuniokit/compare/v3.0.4...v3.0.5) (2026-11-26)
+
+
+### Autres
+
+* **build:** update default tag ([3a046c2](https://github.com/ytihianine/reuniokit/commit/3a046c2c0ff3c746dccf69d29ca90052f45875e1))
+* **deploy:** add cors ([a12ceea](https://github.com/ytihianine/reuniokit/commit/a12ceea6c9b29a04d6e37b7a7b564ad0cb2b76a5))
+
 ## [3.0.4](https://github.com/ytihianine/reuniokit/compare/v3.0.3...v3.0.4) (2026-11-26)
 
 
