@@ -3,6 +3,7 @@
  * Client pour interagir avec l'API Grist
  */
 import "server-only";
+import { ProxyAgent, setGlobalDispatcher } from "undici";
 
 // Types pour les réponses Grist
 export interface GristRecord<T = Record<string, any>> {
@@ -25,6 +26,39 @@ const GRIST_CONFIG = {
   docId: process.env.NEXT_PUBLIC_GRIST_DOC_ID || "abrukV9rnpstUXcusj2JPa",
   apiKey: "",
 };
+
+let proxyConfigured = false;
+
+function getProxyUrl(): string | undefined {
+  return (
+    process.env.HTTPS_PROXY ||
+    process.env.https_proxy ||
+    process.env.HTTP_PROXY ||
+    process.env.http_proxy
+  );
+}
+
+function getProxyAgent(): ProxyAgent | undefined {
+  const proxyUrl = getProxyUrl();
+  if (!proxyUrl) return undefined;
+
+  return new ProxyAgent(proxyUrl);
+}
+
+async function gristFetch(url: string, init: RequestInit): Promise<Response> {
+  if (!proxyConfigured) {
+    const dispatcher = getProxyAgent();
+    if (dispatcher) {
+      // Next.js server runtime uses undici under the hood, but it does not
+      // automatically honor proxy env vars for fetch. Configure a dispatcher
+      // once so native fetch routes outbound traffic through the proxy.
+      setGlobalDispatcher(dispatcher);
+    }
+    proxyConfigured = true;
+  }
+
+  return fetch(url, init);
+}
 
 /**
  * Récupère la clé API Grist depuis l'environnement d'exécution.
@@ -76,7 +110,7 @@ export class GristClient {
       url += `?filter=${filterParam}`;
     }
 
-    const response = await fetch(url, {
+    const response = await gristFetch(url, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -138,7 +172,7 @@ export class GristClient {
   async downloadAttachment(attachmentId: number): Promise<Response> {
     const url = `${this.baseUrl}/docs/${this.docId}/attachments/${attachmentId}/download`;
 
-    const response = await fetch(url, {
+    const response = await gristFetch(url, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${this.getApiKey()}`,
