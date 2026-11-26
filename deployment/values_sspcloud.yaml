@@ -5,7 +5,7 @@ objets:
       name: reuniokit-frontend
       image:
         repository: ghcr.io/ytihianine/reuniokit/reuniokit
-        tag: v3.0.3
+        tag: v3.0.4
         imagePullPolicy: Always
       envFrom:
         - secretRef:
