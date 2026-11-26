@@ -40,7 +40,7 @@ export default function CardLibrary({ fiche }: { fiche: FicheMethode }) {
         </p>
         <p className={styles.cardContainerInformationDifficulty}>
           Difficulté
-          <div>
+          <span>
             {Array(Number(fiche.difficulte))
               .fill(null)
               .map((_, i) => (
@@ -51,7 +51,7 @@ export default function CardLibrary({ fiche }: { fiche: FicheMethode }) {
               .map((_, i) => (
                 <img key={i} src={star_empty} alt="étoile vide" />
               ))}
-          </div>
+          </span>
         </p>
       </div>
     </div>
